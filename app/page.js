@@ -101,10 +101,10 @@ export default function Home() {
     e.preventDefault();
     const email = e.target.querySelector('input[type="email"]').value;
     console.log('Newsletter signup:', email);
-    
+
     // TODO: Send to backend at API_ENDPOINTS.NEWSLETTER_SUBSCRIBE
     // Show success message: SUCCESS_MESSAGES.NEWSLETTER_SUBSCRIBED
-    
+
     e.target.reset();
   };
 
@@ -125,11 +125,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         <nav className={styles.navbar}>
           <div className={styles.navContent}>
             <a href="#" className={styles.logo}>CRAZYKUDI</a>
-            
+
             <div className={styles.navLinks}>
               <a href="#shop">Shop</a>
               <a href="#new">New</a>
@@ -137,7 +137,7 @@ export default function Home() {
               <a href="#about">About</a>
               <a href="#contact">Contact</a>
             </div>
-            
+
             <div className={styles.navIcons}>
               <button className={styles.iconBtn} aria-label="Search">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -166,15 +166,20 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}>
-          <img src="/hero-image.png" alt="Summer Fashion" className={styles.heroImage} />
+          <img src="/hero-image.png" alt="Summer Fashion" className={`${styles.heroImage} ${styles.heroImagePhone}`} />
+          <img src="/hero-image.png" alt="Summer Fashion" className={`${styles.heroImage} ${styles.heroImageDesktop}`} />
         </div>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Summer Essentials</h1>
-          <p className={styles.heroSubtitle}>Discover timeless pieces for every season</p>
-          <button className={styles.heroButton}>Shop Collection</button>
+        <div className={styles.heroContentContainer}>
+          <div className={styles.heroContentParent}>
+            <div className={styles.heroContent}>
+              <p className={styles.heroSubtitle}>Discover timeless pieces</p>
+              <h1 className={styles.heroTitle}>Summer Essentials</h1>
+              <button className={styles.heroButton}>Shop Collection</button>
+            </div>
+          </div>
         </div>
       </section>
-
+      
       {/* Categories Section */}
       <section className={styles.categories}>
         <div className={styles.categoriesContainer}>
@@ -205,7 +210,7 @@ export default function Home() {
             <h2 className={styles.sectionTitle}>New Arrivals</h2>
             <a href="#" className={styles.viewAll}>View All →</a>
           </div>
-          
+
           {loadingProducts ? (
             <p style={{ textAlign: 'center', padding: '40px' }}>Loading products...</p>
           ) : (
@@ -252,7 +257,7 @@ export default function Home() {
             <h3>Fast Shipping</h3>
             <p>2-3 business day delivery on orders over $50</p>
           </div>
-          
+
           <div className={styles.benefitItem}>
             <div className={styles.benefitIcon}>
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -262,7 +267,7 @@ export default function Home() {
             <h3>Secure Payment</h3>
             <p>All transactions are protected and encrypted</p>
           </div>
-          
+
           <div className={styles.benefitItem}>
             <div className={styles.benefitIcon}>
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -272,7 +277,7 @@ export default function Home() {
             <h3>Easy Returns</h3>
             <p>30-day hassle-free returns on all items</p>
           </div>
-          
+
           <div className={styles.benefitItem}>
             <div className={styles.benefitIcon}>
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -329,7 +334,7 @@ export default function Home() {
               <a href="#" aria-label="Instagram">📷</a>
             </div>
           </div>
-          
+
           <div className={styles.footerColumn}>
             <h4>Shop</h4>
             <ul>
@@ -339,7 +344,7 @@ export default function Home() {
               <li><a href="#">All Products</a></li>
             </ul>
           </div>
-          
+
           <div className={styles.footerColumn}>
             <h4>Customer Care</h4>
             <ul>
@@ -349,7 +354,7 @@ export default function Home() {
               <li><a href="#">FAQ</a></li>
             </ul>
           </div>
-          
+
           <div className={styles.footerColumn}>
             <h4>Company</h4>
             <ul>
@@ -359,7 +364,7 @@ export default function Home() {
               <li><a href="#">Sustainability</a></li>
             </ul>
           </div>
-          
+
           <div className={styles.footerColumn}>
             <h4>Legal</h4>
             <ul>
@@ -370,7 +375,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        
+
         <div className={styles.footerBottom}>
           <p>&copy; 2026 CRAZYKUDI. All rights reserved.</p>
           <div className={styles.paymentMethods}>

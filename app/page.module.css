@@ -14,21 +14,21 @@
   --success: #2ecc71;
 }
 
+
 .page {
   width: 100%;
-  background-color: #fff;
-  overflow-x: hidden;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
 .header {
-  background: white;
-  position: sticky;
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  position: fixed;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid var(--border-color);
 }
 
 .topBar {
@@ -71,7 +71,7 @@
 }
 
 .navbar {
-  background: white;
+  background: rgba(255, 255, 255, 0);
   padding: 15px 0;
 }
 
@@ -155,6 +155,7 @@
 
 /* ===== HERO SECTION ===== */
 .hero {
+  aspect-ratio: 1.2632 / 1;
   width: 100%;
   min-height: 100svh;
   height: 100%;
@@ -174,43 +175,66 @@
   height: 100%;
   object-fit: cover;
 }
-@media (min-width: 900px) {
-  .heroImage {
-    height: auto;
+
+@media (max-width: 899px) {
+  .heroImageDesktop {
+    display: none;
   }
 }
 
-.heroContent {
-  position: sticky;
-  top: 0;
-  /* z-index: 2; */
-  height: 100svh;
-  text-align: center;
-  max-width: 600px;
-  animation: fadeInUp 0.9s ease-out;
+@media (min-width: 900px) {
+
+  .heroImagePhone {
+    display: none;
+  }
 }
 
-.heroTitle {
-  font-size: 64px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  color: var(--primary-black);
-  margin-bottom: 15px;
-  line-height: 1.2;
+.heroContentContainer {
+  height: 100svh;
+  position: sticky;
+  top: 0;
+}
+
+.heroContentParent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.heroContent {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .heroSubtitle {
-  font-size: 18px;
-  color: var(--secondary-text);
-  margin-bottom: 40px;
+  font-size: 15px;
+  color: white;
   letter-spacing: 0.5px;
-  font-weight: 400;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.heroTitle {
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .heroButton {
-  background: var(--primary-black);
-  color: white;
-  border: 2px solid var(--primary-black);
+  background: white;
+  color: rgb(0, 0, 0);
+  border: 2px solid white;
   padding: 16px 48px;
   font-size: 13px;
   font-weight: 600;
@@ -753,6 +777,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
