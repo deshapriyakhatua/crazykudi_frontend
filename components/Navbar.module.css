@@ -1,0 +1,218 @@
+/* ===== SCROLL ANIMATIONS ===== */
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+.header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navVisible {
+  animation: slideUp 0.3s ease forwards;
+}
+
+.navHidden {
+  animation: slideDown 0.3s ease forwards;
+}
+
+.headerTransparent {
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.3s ease;
+}
+
+.headerSolid {
+  background: rgba(255, 255, 255, 0.87);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.topBar {
+  background: #000;
+  color: white;
+  padding: 10px 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+.topBarContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topBarText {
+  flex: 1;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.topBarRight {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.topBarLink {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.topBarLink:hover {
+  opacity: 0.7;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0);
+  padding: 15px 0;
+}
+
+.navContent {
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.logoContainer {
+    height: 30px;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  transition: font-size 0.3s ease, transform 0.3s ease;
+}
+
+.logoLarge {
+    
+  font-size: 184px;
+  transform: translateY(30px);
+}
+
+.logoNormal {
+  font-size: 28px;
+  transform: translateY(0);
+}
+
+.logoBlack {
+    color: black;
+}
+.logoWhite {
+    color: white;
+}
+
+.navLinks {
+  display: flex;
+  gap: 35px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navLinks a:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #000;
+}
+
+.navLinks a:hover:after {
+  width: 100%;
+}
+
+.rightNavIcons,.leftNavIcons {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.iconBtn:hover {
+  color: #000;
+}
+
+.iconWhite {
+  color: #ffffff;
+}
+
+.iconWhite:hover {
+  color: #f0f0f0;
+}
+
+.iconBlack {
+  color: #1a1a1a;
+}
+
+.iconBlack:hover {
+  color: #000;
+}

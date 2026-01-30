@@ -1,0 +1,81 @@
+/* ===== CATEGORIES SECTION ===== */
+.categories {
+  padding: 80px 20px;
+  background: white;
+}
+
+.categoriesContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #000;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.categoryCard {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+}
+
+.categoryImage {
+  background: #f5f5f5;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.categoryEmoji {
+  font-size: 100px;
+}
+
+.categoryCard h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.categoryCard p {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.categoryLink {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.categoryLink:hover {
+  border-bottom-color: #000;
+}
