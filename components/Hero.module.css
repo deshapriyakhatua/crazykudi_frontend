@@ -1,6 +1,6 @@
 /* ===== HERO SECTION ===== */
 .hero {
-  aspect-ratio: 1.2632 / 1;
+  aspect-ratio: 1.0832 / 1;
   width: 100%;
   min-height: 100svh;
   height: 100%;
@@ -62,7 +62,7 @@
   color: white;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .heroTitle {
@@ -73,6 +73,15 @@
   color: white;
   margin-bottom: 25px;
   line-height: 1.2;
+}
+@media (max-width: 1000px) {
+    .heroTitle {
+        font-size: 34px;
+    }
+    .heroSubtitle {
+        font-size: 13px;
+        font-weight: 300;
+    }
 }
 
 .heroButton {

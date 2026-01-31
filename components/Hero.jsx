@@ -29,8 +29,8 @@ export default function Hero({ onHeroInViewChange }) {
   return (
     <section className={styles.hero} ref={heroSectionRef}>
       <div className={styles.heroOverlay}>
-        <img src="/hero-image.png" alt="Summer Fashion" className={`${styles.heroImage} ${styles.heroImagePhone}`} />
-        <img src="/hero-image.png" alt="Summer Fashion" className={`${styles.heroImage} ${styles.heroImageDesktop}`} />
+        <img src="/hero-image3.jpg" alt="Summer Fashion" className={`${styles.heroImage} ${styles.heroImagePhone}`} />
+        <img src="/hero-image3.jpg" alt="Summer Fashion" className={`${styles.heroImage} ${styles.heroImageDesktop}`} />
       </div>
       <div className={styles.heroContentContainer}>
         <div className={styles.heroContentParent}>
