@@ -124,22 +124,141 @@
   transition: font-size 0.3s ease, transform 0.3s ease;
 }
 
+.logoImg {
+  --logo-height: 30px;
+}
+
+@media (max-width: 768px) {
+    .logoImg {
+        --logo-height: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logoImg {
+        --logo-height: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logoImg {
+        --logo-height: 15px;
+    }
+}
+
+.logoImg {
+    width: auto;
+    height: var(--logo-height);
+    transition: height 0.3s ease, transform 0.3s ease;
+}
+
+
 .logoLarge {
-    
-  font-size: 184px;
-  transform: translateY(30px);
+  --large-logo-height: 190px;
+}
+
+@media (max-width: 1880px) {
+    .logoLarge {
+        --large-logo-height: 160px;
+    }
+}
+
+@media (max-width: 1700px) {
+    .logoLarge {
+        --large-logo-height: 150px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .logoLarge {
+        --large-logo-height: 140px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .logoLarge {
+        --large-logo-height: 130px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .logoLarge {
+        --large-logo-height: 120px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .logoLarge {
+        --large-logo-height: 110px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logoLarge {
+        --large-logo-height: 105px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .logoLarge {
+        --large-logo-height: 90px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .logoLarge {
+        --large-logo-height: 85px;
+    }
+}
+@media (max-width: 900px) {
+    .logoLarge {
+        --large-logo-height: 80px;
+    }
+}
+
+@media (max-width: 800px) {
+    .logoLarge {
+        --large-logo-height: 70px;
+    }
+}
+
+@media (max-width: 700px) {
+    .logoLarge {
+        --large-logo-height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logoLarge {
+        --large-logo-height: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logoLarge {
+        --large-logo-height: 45px;
+    }
+}
+
+@media (max-width: 450px) {
+    .logoLarge {
+        --large-logo-height: 40px;
+    }
+}
+@media (max-width: 350px) {
+    .logoLarge {
+        --large-logo-height: 35px;
+    }
+}
+
+.logoLarge {
+  height: var(--large-logo-height);
+  transform: translateY(60px);
 }
 
 .logoNormal {
-  font-size: 28px;
+  height: var(--logo-height);
   transform: translateY(0);
-}
-
-.logoBlack {
-    color: black;
-}
-.logoWhite {
-    color: white;
 }
 
 .navLinks {

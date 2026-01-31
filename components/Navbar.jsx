@@ -5,7 +5,7 @@ import styles from "./Navbar.module.css";
 
 export default function Navbar({ heroInView }) {
     const [isNavVisible, setIsNavVisible] = useState(true);
-    const [isAtTop, setIsAtTop] = useState(true);
+    const [isAtTop, setIsAtTop] = useState(() => window.scrollY < 100);
     const lastScrollYRef = useRef(0);
 
     // Handle scroll event to show/hide navigation
@@ -63,7 +63,13 @@ export default function Navbar({ heroInView }) {
                     </div>
 
                     <div className={styles.logoContainer}>
-                        <a href="#" className={`${styles.logo} ${heroInView ? styles.logoWhite : styles.logoBlack} ${isAtTop ? styles.logoLarge : styles.logoNormal}`}>CRAZYKUDI</a>
+                        <a href="#" className={`${styles.logo}`}>
+                            {heroInView ?
+                                <img src="/logo-white.png" alt="logo" className={`${styles.logoImg} ${styles.logoWhite} ${isAtTop && heroInView ? styles.logoLarge : styles.logoNormal}`} />
+                                :
+                                <img src="/logo-black.png" alt="logo" className={`${styles.logoImg} ${styles.logoBlack}`} />
+                            }
+                        </a>
                     </div>
 
                     <div className={styles.rightNavIcons}>
