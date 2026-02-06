@@ -5,11 +5,15 @@ import styles from "./Navbar.module.css";
 
 export default function Navbar({ heroInView }) {
     const [isNavVisible, setIsNavVisible] = useState(true);
-    const [isAtTop, setIsAtTop] = useState(() => window.scrollY < 100);
+    const [isAtTop, setIsAtTop] = useState(true);
     const lastScrollYRef = useRef(0);
 
     // Handle scroll event to show/hide navigation
     useEffect(() => {
+        // Set initial state based on current scroll position
+        setIsAtTop(window.scrollY < 100);
+        lastScrollYRef.current = window.scrollY;
+
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 

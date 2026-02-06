@@ -21,13 +21,15 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <Navbar heroInView={heroInView} />
-      <Hero onHeroInViewChange={handleHeroInViewChange} />
-      <Categories />
-      <FeaturedProducts />
-      <Benefits />
-      <Testimonials />
-      <Newsletter />
+      <div className={styles.mainBody}>
+        <Navbar heroInView={heroInView} />
+        <Hero onHeroInViewChange={handleHeroInViewChange} />
+        <Categories />
+        <FeaturedProducts />
+        <Benefits />
+        <Testimonials />
+        <Newsletter />
+      </div>
       <Footer />
     </div>
   );

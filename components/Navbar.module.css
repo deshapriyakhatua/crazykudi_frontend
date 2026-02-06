@@ -4,6 +4,7 @@
     transform: translateY(0);
     opacity: 1;
   }
+
   to {
     transform: translateY(-100%);
     opacity: 0;
@@ -15,6 +16,7 @@
     transform: translateY(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -45,7 +47,7 @@
 }
 
 .headerSolid {
-  background: rgba(255, 255, 255, 0.87);
+  background: rgba(255, 255, 255, 0.603);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
@@ -105,7 +107,7 @@
 }
 
 .logoContainer {
-    height: 30px;
+  height: 48px;
   position: relative;
   flex-grow: 1;
   display: flex;
@@ -114,8 +116,8 @@
 }
 
 .logo {
-    position: absolute;
-    top: 0px;
+  position: absolute;
+  top: 10px;
   font-size: 28px;
   font-weight: 200;
   letter-spacing: 2px;
@@ -129,27 +131,27 @@
 }
 
 @media (max-width: 768px) {
-    .logoImg {
-        --logo-height: 25px;
-    }
+  .logoImg {
+    --logo-height: 25px;
+  }
 }
 
 @media (max-width: 500px) {
-    .logoImg {
-        --logo-height: 20px;
-    }
+  .logoImg {
+    --logo-height: 20px;
+  }
 }
 
 @media (max-width: 400px) {
-    .logoImg {
-        --logo-height: 15px;
-    }
+  .logoImg {
+    --logo-height: 15px;
+  }
 }
 
 .logoImg {
-    width: auto;
-    height: var(--logo-height);
-    transition: height 0.3s ease, transform 0.3s ease;
+  width: auto;
+  height: var(--logo-height);
+  transition: height 0.3s ease, transform 0.3s ease;
 }
 
 
@@ -158,97 +160,99 @@
 }
 
 @media (max-width: 1880px) {
-    .logoLarge {
-        --large-logo-height: 160px;
-    }
+  .logoLarge {
+    --large-logo-height: 160px;
+  }
 }
 
 @media (max-width: 1700px) {
-    .logoLarge {
-        --large-logo-height: 150px;
-    }
+  .logoLarge {
+    --large-logo-height: 150px;
+  }
 }
 
 @media (max-width: 1600px) {
-    .logoLarge {
-        --large-logo-height: 140px;
-    }
+  .logoLarge {
+    --large-logo-height: 140px;
+  }
 }
 
 @media (max-width: 1500px) {
-    .logoLarge {
-        --large-logo-height: 130px;
-    }
+  .logoLarge {
+    --large-logo-height: 130px;
+  }
 }
 
 @media (max-width: 1400px) {
-    .logoLarge {
-        --large-logo-height: 120px;
-    }
+  .logoLarge {
+    --large-logo-height: 120px;
+  }
 }
 
 @media (max-width: 1300px) {
-    .logoLarge {
-        --large-logo-height: 110px;
-    }
+  .logoLarge {
+    --large-logo-height: 110px;
+  }
 }
 
 @media (max-width: 1200px) {
-    .logoLarge {
-        --large-logo-height: 105px;
-    }
+  .logoLarge {
+    --large-logo-height: 105px;
+  }
 }
 
 @media (max-width: 1100px) {
-    .logoLarge {
-        --large-logo-height: 90px;
-    }
+  .logoLarge {
+    --large-logo-height: 90px;
+  }
 }
 
 @media (max-width: 1000px) {
-    .logoLarge {
-        --large-logo-height: 85px;
-    }
+  .logoLarge {
+    --large-logo-height: 85px;
+  }
 }
+
 @media (max-width: 900px) {
-    .logoLarge {
-        --large-logo-height: 80px;
-    }
+  .logoLarge {
+    --large-logo-height: 80px;
+  }
 }
 
 @media (max-width: 800px) {
-    .logoLarge {
-        --large-logo-height: 70px;
-    }
+  .logoLarge {
+    --large-logo-height: 70px;
+  }
 }
 
 @media (max-width: 700px) {
-    .logoLarge {
-        --large-logo-height: 60px;
-    }
+  .logoLarge {
+    --large-logo-height: 60px;
+  }
 }
 
 @media (max-width: 600px) {
-    .logoLarge {
-        --large-logo-height: 50px;
-    }
+  .logoLarge {
+    --large-logo-height: 50px;
+  }
 }
 
 @media (max-width: 500px) {
-    .logoLarge {
-        --large-logo-height: 45px;
-    }
+  .logoLarge {
+    --large-logo-height: 45px;
+  }
 }
 
 @media (max-width: 450px) {
-    .logoLarge {
-        --large-logo-height: 40px;
-    }
+  .logoLarge {
+    --large-logo-height: 40px;
+  }
 }
+
 @media (max-width: 350px) {
-    .logoLarge {
-        --large-logo-height: 35px;
-    }
+  .logoLarge {
+    --large-logo-height: 35px;
+  }
 }
 
 .logoLarge {
@@ -298,7 +302,8 @@
   width: 100%;
 }
 
-.rightNavIcons,.leftNavIcons {
+.rightNavIcons,
+.leftNavIcons {
   display: flex;
   gap: 20px;
   flex-shrink: 0;

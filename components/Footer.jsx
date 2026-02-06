@@ -58,13 +58,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.footerBottom}>
-        <p>&copy; 2026 CRAZYKUDI. All rights reserved.</p>
-        <div className={styles.paymentMethods}>
-          <span>We accept: Visa</span>
-          <span>Mastercard</span>
-          <span>AmEx</span>
-          <span>PayPal</span>
-        </div>
+        <img src="/logo-black-footer.png" alt="CRAZYKUDI Logo" />
       </div>
     </footer>
   );
