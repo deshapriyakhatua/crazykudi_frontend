@@ -4,8 +4,12 @@ import { useState } from 'react';
 import styles from "./page.module.css";
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import BrandBanner from '@/components/BrandBanner';
+import Lookbook from '@/components/Lookbook';
+import Campaigns from '@/components/Campaigns';
+import BrandStory from '@/components/BrandStory';
+import MediaGrid from '@/components/MediaGrid';
 import Categories from '@/components/Categories';
-import FeaturedProducts from '@/components/FeaturedProducts';
 import Benefits from '@/components/Benefits';
 import Testimonials from '@/components/Testimonials';
 import Newsletter from '@/components/Newsletter';
@@ -24,8 +28,12 @@ export default function Home() {
       <div className={styles.mainBody}>
         <Navbar heroInView={heroInView} />
         <Hero onHeroInViewChange={handleHeroInViewChange} />
+        <Lookbook />
+        {/* <BrandBanner /> */}
+        <Campaigns />
+        <BrandStory />
+        <MediaGrid />
         <Categories />
-        <FeaturedProducts />
         <Benefits />
         <Testimonials />
         <Newsletter />

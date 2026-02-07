@@ -1,0 +1,130 @@
+/* ===== LOOKBOOK ===== */
+.lookbook {
+  padding: 80px 40px;
+  background: #f8f8f8;
+}
+
+.lookbookHeader {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.lookbookHeader h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #242424;
+  margin-bottom: 15px;
+}
+
+.lookbookHeader p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.lookbookGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin: 0 auto;
+}
+
+.lookbookCard {
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.lookbookCard:hover {
+  transform: translateY(-2px);
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 10 / 16;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.lookbookCard:hover .imageWrapper img {
+  transform: scale(1.02);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lookbookCard:hover .overlay {
+  opacity: 0;
+}
+
+.overlay h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.overlay p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .lookbookGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lookbook {
+    padding: 60px 20px;
+  }
+
+  .lookbookHeader h2 {
+    font-size: 32px;
+  }
+
+  .lookbookGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lookbook {
+    padding: 40px 16px;
+  }
+
+  .lookbookHeader h2 {
+    font-size: 24px;
+  }
+
+  .lookbookHeader p {
+    font-size: 14px;
+  }
+
+  .lookbookGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
