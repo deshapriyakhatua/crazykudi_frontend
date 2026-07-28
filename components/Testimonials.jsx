@@ -18,7 +18,7 @@ export default function Testimonials() {
         const data = await response.json();
         setTestimonials(data);
       } catch (err) {
-        console.error('Error fetching testimonials:', err);
+        console.warn('Could not fetch testimonials from API, using fallback data:', err.message);
         setError(err.message);
         // Fallback data
         setTestimonials([

@@ -11,14 +11,14 @@ export default function Navbar({ heroInView }) {
     // Handle scroll event to show/hide navigation
     useEffect(() => {
         // Set initial state based on current scroll position
-        setIsAtTop(window.scrollY < 100);
+        setIsAtTop(window.scrollY < 300);
         lastScrollYRef.current = window.scrollY;
 
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
             // Check if at top
-            setIsAtTop(currentScrollY < 100);
+            setIsAtTop(currentScrollY < 300);
 
             if (currentScrollY > lastScrollYRef.current && currentScrollY > 300) {
                 // Scrolling down - hide nav

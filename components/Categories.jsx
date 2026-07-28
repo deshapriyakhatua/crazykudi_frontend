@@ -18,7 +18,7 @@ export default function Categories() {
         const data = await response.json();
         setCategories(data);
       } catch (err) {
-        console.error('Error fetching categories:', err);
+        console.warn('Could not fetch categories from API, using fallback data:', err.message);
         setError(err.message);
         // Fallback data
         setCategories([

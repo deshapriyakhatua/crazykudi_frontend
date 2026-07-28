@@ -18,7 +18,7 @@ export default function FeaturedProducts() {
         const data = await response.json();
         setProducts(data);
       } catch (err) {
-        console.error('Error fetching products:', err);
+        console.warn('Could not fetch products from API, using fallback data:', err.message);
         setError(err.message);
         // Fallback data
         setProducts([
